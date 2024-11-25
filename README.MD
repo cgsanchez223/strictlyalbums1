@@ -9,7 +9,17 @@ To get the app running:
 
 Use "npm i" in the terminal in both frontend and backend folders to download all of the packages
 
-An env file should be created in the backend folder. It contains the following variables: DB_USER=yourusername DB_HOST=localhost DB_NAME=strictlyalbums DB_PASSWORD=yourpassword DB_PORT=5432 JWT_SECRET=jwtpassword SPOTIFY_CLIENT_ID= SPOTIFY_CLIENT_SECRET= PORT=5007 DB_FORCE_SYNC=false
+An env file should be created in the backend folder. It contains the following variables: 
+DB_USER=yourusername 
+DB_HOST=localhost 
+DB_NAME=strictlyalbums 
+DB_PASSWORD=yourpassword 
+DB_PORT=5432 
+JWT_SECRET=jwtpassword 
+SPOTIFY_CLIENT_ID= 
+SPOTIFY_CLIENT_SECRET= 
+PORT=5007 
+DB_FORCE_SYNC=false
 
 SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET can be found by going on https://developer.spotify.com/ Create an app. You will be given a client_id and client_secret. Add your localhost to the whitelist
 

@@ -126,7 +126,7 @@ const Profile = () => {
             {activeTab === 'ratings' ? (
                 <div className="space-y-8">
                     <div className="flex justify-between items-center">
-                        <h2 className="text-xl font-semibold text-gray-900">Recent Ratings</h2>
+                        <h2 className="text-xl font-semibold text-gray-900">My Ratings</h2>
                     </div>
 
                     {ratings.length === 0 ? (

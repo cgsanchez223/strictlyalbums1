@@ -15,7 +15,7 @@ const profileController = {
                     {
                         model: Rating,
                         as: 'ratings',
-                        limit: 6,
+                        limit: null,
                         order: [['createdAt', 'DESC']],
                     },
                     {

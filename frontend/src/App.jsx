@@ -13,6 +13,7 @@ import ListDetail from './pages/ListDetail.jsx';
 import EditList from './pages/EditList.jsx';
 import { AuthProvider } from './context/AuthContext.jsx';
 import Dashboard from './pages/Dashboard.jsx';
+import Lists from './pages/Lists.jsx';
 
 
 function App() {
@@ -46,6 +47,12 @@ function App() {
             <Route path="/album/:id" element={
               <ProtectedRoute>
                 <AlbumDetail />
+              </ProtectedRoute>
+            } />
+
+            <Route path="/lists" element={
+              <ProtectedRoute>
+                <Lists />
               </ProtectedRoute>
             } />
 

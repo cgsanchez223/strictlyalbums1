@@ -87,7 +87,7 @@ const Dashboard = () => {
                     <div className="flex items-center justify-between">
                         <div>
                             <h1 className="text-3xl font-bold">
-                                Welcome back, {user?.username}!
+                                Welcome back, {user?.username}! 👋
                             </h1>
                             <p className="mt-2 text-blue-100">
                                 Ready to discover and rate more music?

@@ -15,13 +15,13 @@ const profileController = {
                     {
                         model: Rating,
                         as: 'ratings',
-                        limit: 5,
+                        limit: 6,
                         order: [['createdAt', 'DESC']],
                     },
                     {
                         model: List,
                         as: 'lists',
-                        limit: 5,
+                        limit: 6,
                         order: [['createdAt', 'DESC']],
                     }
                 ]

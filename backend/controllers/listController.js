@@ -10,9 +10,9 @@ const listController = {
             const { name, description, isPublic } = req.body;
             const userId = req.user.id;
 
-            console.log("=========================")
-            console.log(req.user.id)
-            console.log("=========================")
+            // console.log("=========================")
+            // console.log(req.user.id)
+            // console.log("=========================")
 
             const list = await List.create({
                 name,
@@ -31,7 +31,7 @@ const listController = {
             res.status(500).json({
                 success: false,
                 message: 'Error creating list',
-                error: process.env.NODE_ENV === 'development' ? error.message : undefined
+                error: error.message
             });
         }
     },
@@ -60,7 +60,7 @@ const listController = {
             res.status(500).json({
                 success: false,
                 message: 'Error fetching lists',
-                error: process.env.NODE_ENV === 'development' ? error.message : undefined
+                error: error.message
             });
         }
     },
@@ -109,7 +109,7 @@ const listController = {
             res.status(500).json({
                 success: false,
                 message: 'Error fetching list',
-                error: process.env.NODE_ENV === 'development' ? error.message : undefined
+                error: error.message
             });
         }
     },
@@ -140,7 +140,7 @@ const listController = {
 
             res.json({
                 success: true,
-                message: 'List update successfully',
+                message: 'List updated successfully',
                 data: list
             });
         } catch (error) {
@@ -148,7 +148,7 @@ const listController = {
             res.status(500).json({
                 success: false,
                 message: 'Error updating list',
-                error: process.env.NODE_ENV === 'development' ? error.message : undefined
+                error: error.message
             });
         }
     },
@@ -181,7 +181,7 @@ const listController = {
             res.status(500).json({
                 success: false,
                 message: 'Error deleting list',
-                error: process.env.NODE_ENV === 'development' ? error.message : undefined
+                error: error.message
             });
         }
     },
@@ -225,7 +225,7 @@ const listController = {
             res.status(500).json({
                 success: false,
                 message: 'Error adding album to list',
-                error: process.env.NODE_ENV === 'development' ? error.message : undefined
+                error: error.message
             });
         }
     },
@@ -258,7 +258,7 @@ const listController = {
             res.status(500).json({
                 success: false,
                 message: 'Error removing album from list',
-                error: process.env.NODE_ENV === 'development' ? error.message : undefined
+                error: error.message
             });
         }
     }

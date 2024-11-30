@@ -27,7 +27,7 @@ const spotifyController = {
             res.status(500).json({
                 success: false,
                 message: 'Error searching albums',
-                error: process.env.NODE_ENV === 'development' ? error.message : undefined
+                error: error.message
             });
         }
     },
@@ -55,7 +55,7 @@ const spotifyController = {
             res.status(500).json({
                 success: false,
                 message: 'Error getting album details',
-                error: process.env.NODE_ENV === 'development' ? error.message : undefined
+                error: error.message
             });
         }
     }

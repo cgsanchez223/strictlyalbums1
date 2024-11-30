@@ -12,7 +12,7 @@ const authController = {
         try {
             const { username, email, password, avatar_url } = req.body;
 
-            console.log(req.body)
+            // console.log(req.body)
 
             // Check if user already exists
             const existingUser = await User.findOne({
@@ -34,7 +34,7 @@ const authController = {
             // Hash password - info appears in terminal
             const salt = await bcrypt.genSalt(10);
             const hashedPassword = await bcrypt.hash(password, salt);
-            console.log(hashedPassword)
+            // console.log(hashedPassword)
 
             // Create new user
             const user = await User.create({
@@ -51,7 +51,7 @@ const authController = {
                     username: user.username
                 },
                 process.env.JWT_SECRET,
-                { expiresIn: process.env.JWT_EXPIRATION || '24h'}
+                { expiresIn: process.env.JWT_EXPIRATION || '24h' }
             );
 
             // Send response without password
@@ -77,7 +77,7 @@ const authController = {
             res.status(500).json({
                 success: false,
                 message: 'Error registering user',
-                error: process.env.NODE_ENV === 'development' ? error.message : undefined
+                error: error.message
             });
         }
     },
@@ -156,7 +156,7 @@ const authController = {
             res.status(500).json({
                 success: false,
                 message: 'Error during login',
-                error: process.env.NODE_ENV === 'development' ? error.message : undefined
+                error: error.message
             });
         }
     },

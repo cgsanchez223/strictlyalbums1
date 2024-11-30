@@ -51,7 +51,7 @@ const ratingController = {
 
             res.status(201).json({
                 success: true,
-                message: existingRating ? 'Rating updated successfully' : 'Rating create successfully',
+                message: existingRating ? 'Rating updated successfully' : 'Rating created successfully',
                 data: result
             });
         } catch (error) {
@@ -59,7 +59,7 @@ const ratingController = {
             res.status(500).json({
             success: false,
             message: 'Error creating rating',
-            error: process.env.NODE_ENV === 'development' ? error.message : undefined
+            error: error.message
         });
         }
     },
@@ -93,7 +93,7 @@ const ratingController = {
             res.status(500).json({
                 success: false,
                 message: 'Error fetching rating',
-                error: process.env.NODE_ENV === 'development' ? error.message : undefined
+                error: error.message
             });
         }
     },
@@ -126,7 +126,7 @@ const ratingController = {
             res.status(500).json({
                 success: false,
                 message: 'Error fetching ratings',
-                error: process.env.NODE_ENV === 'development' ? error.message : undefined
+                error: error.message
             });
         }
     },
@@ -162,7 +162,7 @@ const ratingController = {
             res.status(500).json({
                 success: false,
                 message: 'Error deleting rating',
-                error: process.env.NODE_ENV === 'development' ? error.message : undefined
+                error: error.message
             });
         }
     },
@@ -198,7 +198,7 @@ const ratingController = {
             res.status(500).json({
                 success: false,
                 message: 'Error fetching recent ratings',
-                error: process.env.NODE_ENV === 'development' ? error.message : undefined
+                error: error.message
             });
         }
     }

@@ -43,7 +43,7 @@ const profileController = {
             res.status(500).json({
                 success: false,
                 message: 'Error fetching profile',
-                error: process.env.NODE_ENV === 'development' ? error.message : undefined
+                error: error.message
             });
         }
     },
@@ -113,7 +113,7 @@ const profileController = {
             res.status(500).json({
                 success: false,
                 message: 'Error updating profile',
-                error: process.env.NODE_ENV === 'development' ? error.message : undefined
+                error: error.message
             });
         }
     },
@@ -150,7 +150,7 @@ const profileController = {
             res.status(500).json({
                 success: false,
                 message: 'Error fetching ratings',
-                error: process.env.NODE_ENV === 'development' ? error.message : undefined
+                error: error.message
             });
         }
     },
@@ -187,7 +187,7 @@ const profileController = {
             res.status(500).json({
                 success: false,
                 message: 'Error fetching lists',
-                error: process.env.NODE_ENV === 'development' ? error.message : undefined
+                error: error.message
             });
         }
     }

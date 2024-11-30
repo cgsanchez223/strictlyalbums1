@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from '../context/AuthContext';
 import { useState, useRef, useEffect } from "react";
+import React from "react";
 
 // Navbar contains the title which leads back to dashboard and a user drop down menu with additional navigation.
 

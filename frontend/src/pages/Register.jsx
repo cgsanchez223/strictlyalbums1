@@ -154,6 +154,7 @@ const Register = () => {
                                 type="text"
                                 required
                                 value={formData.username}
+                                disabled={isLoading}
                                 onChange={handleChange}
                                 className="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-gray-900"
                                 placeholder="Choose a username"
@@ -169,6 +170,7 @@ const Register = () => {
                                 name="email"
                                 type="email"
                                 required
+                                disabled={isLoading}
                                 value={formData.email}
                                 onChange={handleChange}
                                 className="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-gray-900"
@@ -186,6 +188,7 @@ const Register = () => {
                                 type="password"
                                 required
                                 value={formData.password}
+                                disabled={isLoading}
                                 onChange={handleChange}
                                 className="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-gray-900"
                                 placeholder="Create a password"
@@ -203,6 +206,7 @@ const Register = () => {
                                 required
                                 value={formData.confirmPassword}
                                 onChange={handleChange}
+                                disabled={isLoading}
                                 className="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-gray-900"
                                 placeholder="Confirm your password"
                             />

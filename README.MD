@@ -3,6 +3,9 @@ This will be my capstone for SBU. Project Proposal can be found here: https://do
 
 Welcome to StrictlyAlbums! Users will be able to connect to the Spotify API in order to search their favorite music albums. Users can rate the albums out of a 5 star rating system. Users can create lists with their favorite albums.
 
+-----------------------
+Now Live: https://frontend-n8ea.onrender.com/
+
 I used Create React App and Node.Js for the backend server. Vite React for the frontend. Tailwind as a complimentary tool for the styling.
 
 To get the app running:

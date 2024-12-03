@@ -3,7 +3,7 @@ Welcome to StrictlyAlbums
 - This is a tool where users can rate their favorite albums and add them to lists.
 - The album data is retrieved from the Spotify API
 
-##########################-
+-------------------------------------------------------------
 Test the Project out here:
 https://frontend-n8ea.onrender.com/
 
@@ -58,13 +58,13 @@ Using PostgreSQL:
 - App should be live in your localhost
 
 
-##########################
+-------------------------------------------------------------
 Usage:
 The app is very straightforward. After creating an account you will be taken to a dashboard. Click "Search Albums" to be taken to a page where you will be able to search albums that are fetched from the Spotify API. Album artwork will appear, click the album that you would like to rate. This brings up a page featuring many details about the album and the ability to rate the album on a scaled of 1 - 5, provide a description, and add that album to a user created list. After rating, you will be redirected to your profile page, where you will see the album and other albums you have rated. You can also create lists and add albums to those lists.
 
 
 
-##########################
+-------------------------------------------------------------
 Features:
 - Connecting to Spotify API
 - Being able to search for albums
@@ -73,7 +73,7 @@ Features:
 
 
 
-##########################
+-------------------------------------------------------------
 Contributing:
 - Feel free to suggest edits.
 - There are a couple of features that need to be re-written.
@@ -81,7 +81,7 @@ Contributing:
 - The "Most Active Month" is simply a static feature right now. Not sure how to implement or if I even would like to keep.
 
 
-##########################
+-------------------------------------------------------------
 Contact Information:
 - Feel free to message/add me on Github
 - My email is cgsanchez223@gmail.com

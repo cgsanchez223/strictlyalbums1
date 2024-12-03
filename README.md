@@ -3,7 +3,7 @@ Welcome to StrictlyAlbums
 - This is a tool where users can rate their favorite albums and add them to lists.
 - The album data is retrieved from the Spotify API
 
-##########################
+##########################-
 Test the Project out here:
 https://frontend-n8ea.onrender.com/
 
@@ -30,16 +30,16 @@ Installation Instructions:
 
 -------------------------------------------------------------
 Create a .env folder in backend with the following variables:
-DB_USER=yourusername
-DB_HOST=localhost
-DB_NAME=strictlyalbums
-DB_PASSWORD=yourpassword
-DB_PORT=5432
-JWT_SECRET=your_jwt_secret
-SPOTIFY_CLIENT_ID=(instructions *)
-SPOTIFY_CLIENT_SECRET=(instructions *)
-PORT=5007
-DB_FORCE_SYNC=false
+-DB_USER=yourusername
+-DB_HOST=localhost
+-DB_NAME=strictlyalbums
+-DB_PASSWORD=yourpassword
+-DB_PORT=5432
+-JWT_SECRET=your_jwt_secret
+-SPOTIFY_CLIENT_ID=(instructions *)
+-SPOTIFY_CLIENT_SECRET=(instructions *)
+-PORT=5007
+-DB_FORCE_SYNC=false
 
 *Go on https://developer.spotify.com/ and create an app. Under settings you can find a Client ID and Client Secret. 
 - Client ID = SPOTIFY_CLIENT_ID

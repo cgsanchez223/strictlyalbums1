@@ -63,10 +63,10 @@ describe('Auth Middleware', () => {
         expect(mockRes.status).not.toHaveBeenCalled();
     });
 
-    it('should return 401 when no token is provided', async () => {
+    it('should return 400 when no token is provided', async () => {
         await authMiddleware(mockReq, mockRes, nextFunction);
 
-        expect(mockRes.status).toHaveBeenCalledWith(401);
+        expect(mockRes.status).toHaveBeenCalledWith(400);
         expect(mockRes.json).toHaveBeenCalledWith({
             success: false,
             message: 'No token provided'

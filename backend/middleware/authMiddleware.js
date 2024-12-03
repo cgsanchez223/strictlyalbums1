@@ -8,7 +8,7 @@ const authMiddleware = async (req, res, next) => {
         // Get token from header
         const authHeader = req.headers.authorization;
         if (!authHeader || !authHeader.startsWith('Bearer ')) {
-            return res.status(401).json({
+            return res.status(400).json({
                 success: false,
                 message: 'No token provided'
             });
@@ -26,7 +26,7 @@ const authMiddleware = async (req, res, next) => {
             });
 
             if (!user) {
-                return res.status(401).json({
+                return res.status(404).json({
                     success: false,
                     message: 'User not found'
                 });

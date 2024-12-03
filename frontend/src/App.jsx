@@ -22,65 +22,23 @@ function App() {
       <BrowserRouter>
         <div className='min-h-screen bg-gray-50'>
           <Navbar />
+          <ProtectedRoute>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<SignUp />} />
-            <Route path="/search" element={
-              <ProtectedRoute>
-                <Search />
-              </ProtectedRoute>
-            } />
-
-            <Route path="/profile" element={
-              <ProtectedRoute>
-                <Profile />
-              </ProtectedRoute>
-            } />
-
-            <Route path="/profile/edit" element={
-              <ProtectedRoute>
-                <EditProfile />
-              </ProtectedRoute>
-            } />
-
-            <Route path="/album/:id" element={
-              <ProtectedRoute>
-                <AlbumDetail />
-              </ProtectedRoute>
-            } />
-
-            <Route path="/lists" element={
-              <ProtectedRoute>
-                <Lists />
-              </ProtectedRoute>
-            } />
-
-            <Route path="/dashboard" element={
-              <ProtectedRoute>
-                <Dashboard />
-              </ProtectedRoute>
-            } />
-
-            <Route path="/lists/create" element={
-              <ProtectedRoute>
-                <CreateList />
-              </ProtectedRoute>
-            } />
-
-            <Route path="/lists/:listId" element={
-              <ProtectedRoute>
-                <ListDetail />
-              </ProtectedRoute>
-            } />
-
-            <Route path="/lists/:listId/edit" element={
-              <ProtectedRoute>
-                <EditList />
-              </ProtectedRoute>
-            } />
-            
-          </Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<SignUp />} />
+              <Route path="/search" element={<Search />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/profile/edit" element={<EditProfile />} />
+              <Route path="/album/:id" element={<AlbumDetail />} />
+              <Route path="/lists" element={<Lists />} />
+              <Route path="/profile/edit" element={<EditProfile />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/lists/create" element={<CreateList />} />
+              <Route path="/lists/:listId" element={<ListDetail />} />
+              <Route path="/lists/:listId/edit" element={<EditList />} />
+              </Routes>
+          </ProtectedRoute>
         </div>
       </BrowserRouter>
     </AuthProvider>

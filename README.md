@@ -8,7 +8,7 @@ Test the Project out here:
 https://frontend-n8ea.onrender.com/
 
 
-##########################
+-------------------------------------------------------------
 Technologies Used:
 - The backend was created using Create React App along with Node.js.
 - The frontend was created using the Vite React App and styling from Tailwind
@@ -17,11 +17,11 @@ Technologies Used:
 - Deployment was done on Render: https://render.com/
 
 
-##########################
+-------------------------------------------------------------
 Schema Diagram: https://imgur.com/a/hajwyMz
 
 
-##########################
+-------------------------------------------------------------
 Installation Instructions:
 - You should have a Terminal shell such as Ubuntu or GitBash in order to clone git and install packages.
 - You should have Node.js install to work with program

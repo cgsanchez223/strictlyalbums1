@@ -1,28 +1,88 @@
-strictlyalbums
-This will be my capstone for SBU. Project Proposal can be found here: https://docs.google.com/document/d/1LQl8UXuypL95N_y-f1PEVzCBTWsSF8hxAffGFB1Sqo4/edit?usp=sharing
+Welcome to StrictlyAlbums
+- StrictlyAlbums is my capstone project for the Software Engineer Bootcamp at Stony Brook University.
+- This is a tool where users can rate their favorite albums and add them to lists.
+- The album data is retrieved from the Spotify API
 
-Welcome to StrictlyAlbums! Users will be able to connect to the Spotify API in order to search their favorite music albums. Users can rate the albums out of a 5 star rating system. Users can create lists with their favorite albums.
+##########################
+Test the Project out here:
+https://frontend-n8ea.onrender.com/
 
-I used Create React App and Node.Js for the backend server. Vite React for the frontend. Tailwind as a complimentary tool for the styling.
 
-To get the app running:
+##########################
+Technologies Used:
+- The backend was created using Create React App along with Node.js.
+- The frontend was created using the Vite React App and styling from Tailwind
+- Database was taken from the Spotift API. For more information on how to setup use: https://developer.spotify.com/
+- Local Database was constructed using PostgreSQL and TablePlus
+- Deployment was done on Render: https://render.com/
 
-Use "npm i" in the terminal in both frontend and backend folders to download all of the packages
 
-An env file should be created in the backend folder. It contains the following variables: 
-DB_USER=yourusername 
-DB_HOST=localhost 
-DB_NAME=strictlyalbums 
-DB_PASSWORD=yourpassword 
-DB_PORT=5432 
-JWT_SECRET=jwtpassword 
-SPOTIFY_CLIENT_ID= 
-SPOTIFY_CLIENT_SECRET= 
-PORT=5007 
+##########################
+Schema Diagram: https://imgur.com/a/hajwyMz
+
+
+##########################
+Installation Instructions:
+- You should have a Terminal shell such as Ubuntu or GitBash in order to clone git and install packages.
+- You should have Node.js install to work with program
+- You should have PostgreSQL installed to create database
+- After you clone repository, use "npm install" in both backend and frontend folders
+
+-------------------------------------------------------------
+Create a .env folder in backend with the following variables:
+DB_USER=yourusername
+DB_HOST=localhost
+DB_NAME=strictlyalbums
+DB_PASSWORD=yourpassword
+DB_PORT=5432
+JWT_SECRET=your_jwt_secret
+SPOTIFY_CLIENT_ID=(instructions *)
+SPOTIFY_CLIENT_SECRET=(instructions *)
+PORT=5007
 DB_FORCE_SYNC=false
 
-SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET can be found by going on https://developer.spotify.com/ Create an app. You will be given a client_id and client_secret. Add your localhost to the whitelist
+*Go on https://developer.spotify.com/ and create an app. Under settings you can find a Client ID and Client Secret. 
+- Client ID = SPOTIFY_CLIENT_ID
+- Client Secret = SPOTIFY_CLIENT_SECRET
 
-To create tables for the database: in psql createdb strictlyalbums Go into strictlyalbums in psql Paste the following: CREATE TABLE Users ( id SERIAL PRIMARY KEY, username VARCHAR(255) NOT NULL UNIQUE, email VARCHAR(255) NOT NULL UNIQUE, password_hash VARCHAR(255) NOT NULL, avatar_url VARCHAR(255), description TEXT, location VARCHAR(255), favorite_genres TEXT[] DEFAULT ARRAY[]::TEXT[], social_links JSONB DEFAULT '{}'::JSONB, createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP, updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP );
+-------------------------------------------------------------
+Using PostgreSQL:
+- createdb strictlyalbums
+- Go into strictlyalbums
+- view strictlyalbums.sql and paste instructions in PostgreSQL
 
-To start the server use "npm run dev" in your Terminal in both frontend and backend.
+
+-------------------------------------------------------------
+- Finally after all of the above instructions are met:
+- Have both frontend and backend shells open and use "npm run dev" in both
+- App should be live in your localhost
+
+
+##########################
+Usage:
+The app is very straightforward. After creating an account you will be taken to a dashboard. Click "Search Albums" to be taken to a page where you will be able to search albums that are fetched from the Spotify API. Album artwork will appear, click the album that you would like to rate. This brings up a page featuring many details about the album and the ability to rate the album on a scaled of 1 - 5, provide a description, and add that album to a user created list. After rating, you will be redirected to your profile page, where you will see the album and other albums you have rated. You can also create lists and add albums to those lists.
+
+
+
+##########################
+Features:
+- Connecting to Spotify API
+- Being able to search for albums
+- Can rate albums on a 1 - 5 star rating scale
+- Can create lists for adding albums to
+
+
+
+##########################
+Contributing:
+- Feel free to suggest edits.
+- There are a couple of features that need to be re-written.
+- The "Lists Created" feature is bugged at the moment, not being able to count the amount of lists created.
+- The "Most Active Month" is simply a static feature right now. Not sure how to implement or if I even would like to keep.
+
+
+##########################
+Contact Information:
+- Feel free to message/add me on Github
+- My email is cgsanchez223@gmail.com
+- LinkedIn: www.linkedin.com/in/christopher-sanchez-b69872100
